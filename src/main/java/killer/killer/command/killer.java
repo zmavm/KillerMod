@@ -1,5 +1,12 @@
 package killer.killer.command;
 
-public abstract class killer {
+import net.fabricmc.api.ModInitializer;
+
+public class killer implements ModInitializer {
+
+    @Override
+    public void onInitialize() {
+        
+    }
 
 }
