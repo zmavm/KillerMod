@@ -18,19 +18,19 @@
 	"entrypoints": {
 		"main": [
 			{
-				"value": "killer.killer.Killer",
+				"value": "killer.killer..Killer",
 				"adapter": "kotlin"
 			}
 		],
 		"client": [
 			{
-				"value": "killer.killer.KillerClient",
+				"value": "killer.killer..KillerClient",
 				"adapter": "kotlin"
 			}
 		],
 		"fabric-datagen": [
 			{
-				"value": "killer.killer.KillerDataGenerator",
+				"value": "killer.killer..KillerDataGenerator",
 				"adapter": "kotlin"
 			}
 		]

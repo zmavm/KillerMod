@@ -1,4 +1,4 @@
-package killer.killer
+package killer.killer.
 
 import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
