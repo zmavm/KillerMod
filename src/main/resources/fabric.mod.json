@@ -3,9 +3,9 @@
 	"id": "killer",
 	"version": "${version}",
 	"name": "killer",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This mod will spawn a killer in the game, when you spawn the killer.",
 	"authors": [
-		"Me!"
+		"zmavm(GAR9)(www.github.com/zmavm) and 0atmea11 (https://github.com/0atmea11)"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
