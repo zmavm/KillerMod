@@ -3,7 +3,8 @@
 	"package": "killer.killer..mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ModMixin"
+		"ModMixin",
+		"killer"
 	],
 	"injectors": {
 		"defaultRequire": 1
