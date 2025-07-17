@@ -1,4 +1,4 @@
-package killer.killer..mixin;
+package killer.killer.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

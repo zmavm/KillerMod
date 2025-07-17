@@ -1,4 +1,4 @@
-package killer.killer..commands;
+package killer.killer.commands;
 
 import net.fabricmc.api.ModInitializer;
 
