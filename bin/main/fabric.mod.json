@@ -5,7 +5,8 @@
 	"name": "killer",
 	"description": "This mod will spawn a killer in the game, when you spawn the killer.",
 	"authors": [
-		"zmavm(GAR9)(www.github.com/zmavm) and 0atmea11 (https://github.com/0atmea11)"
+		"zmavm(GAR9)(www.github.com/zmavm)",
+		"0atmea11(https://github.com/0atmea11)"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
