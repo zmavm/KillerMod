@@ -2,12 +2,7 @@ plugins {
 	id 'fabric-loom' version "${loom_version}"
 	id 'maven-publish'
 	id "org.jetbrains.kotlin.jvm" version "2.2.0"
-	id "com.github.breadmoirai.github-release" version "2.3.7"
-	id "com.modrinth.minotaur" version "2.+"
 }
-
-// Define missing property to fix error
-ext.minecraft_mappings = 'your_mappings_version_here'
 
 version = project.mod_version
 group = project.maven_group
@@ -43,44 +38,15 @@ fabricApi {
 }
 
 dependencies {
-        // Fabric
-        minecraft "com.mojang:minecraft:${project.minecraft_version}"
-		minecraft "net.minecraft:${project.minecraft_version}:${project.minecraft_mappings}"
-        mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-        modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	// To change the versions see the gradle.properties file
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings loom.officialMojangMappings()
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-        // Mods
-        modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-//        modImplementation "com.terraformersmc:modmenu:${project.mod_menu_version}"
-        modImplementation "me.lucko:fabric-permissions-api:${project.permissions_api_version}"
-
-        include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.3.5")))
-
-        // Code Quality
-        compileOnly "org.jetbrains:annotations:${project.jetbrains_annotations_version}"
-        testImplementation "org.junit.jupiter:junit-jupiter-api:${project.junit_jupiter_version}"
-        testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${project.junit_jupiter_version}"
-
-        // JIJ Dependencies
-        modApi  "me.lucko:fabric-permissions-api:${project.permissions_api_version}"
-        include "me.lucko:fabric-permissions-api:${project.permissions_api_version}"
-        modApi  "eu.pb4:placeholder-api:${project.placeholder_api_version}"
-        include "eu.pb4:placeholder-api:${project.placeholder_api_version}"
-        modImplementation 'org.yaml:snakeyaml:2.0'
-        include 'org.yaml:snakeyaml:2.0'
-        modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
-        include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
-
-        // mod compatibility
-        modCompileOnly  "maven.modrinth:vanish:${project.vanish_version}"
-
-        // Subprojects
-        subprojects.each {
-            implementation project(path: ":${it.name}", configuration: "namedElements")
-            include project("${it.name}:") // nest within distribution
-        }
-    }
-
+	// Fabric API. This is technically optional, but you probably want it anyway.
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
+}
 
 processResources {
 	inputs.property "version", project.version
