@@ -3,8 +3,8 @@
     "killer/killer/mixin/ExampleMixin": {
       "loadLevel": "Lnet/minecraft/server/MinecraftServer;method_3735()V"
     },
-    "killer/killer/mixin/client/ExampleClientMixin": {
-      "run": "Lnet/minecraft/class_310;method_1514()V"
+    "killer/killer/mixin/ModMixin": {
+      "loadLevel": "Lnet/minecraft/server/MinecraftServer;method_3735()V"
     }
   },
   "data": {
@@ -12,8 +12,8 @@
       "killer/killer/mixin/ExampleMixin": {
         "loadLevel": "Lnet/minecraft/server/MinecraftServer;method_3735()V"
       },
-      "killer/killer/mixin/client/ExampleClientMixin": {
-        "run": "Lnet/minecraft/class_310;method_1514()V"
+      "killer/killer/mixin/ModMixin": {
+        "loadLevel": "Lnet/minecraft/server/MinecraftServer;method_3735()V"
       }
     }
   }
